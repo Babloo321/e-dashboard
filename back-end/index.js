@@ -22,8 +22,26 @@ app.use(cors());                // used as middleware
 // connectDb();
 
 app.post('/register', async (req, res) => {
+    // console.log(req.body.email);
+    // let email = req.body.email;
+    // if(email == await users.findOne(email)){
+    //     res.send({result: "Invalid email address:: Please enter a valid email address"});
+    // }else{
     let user = new users(req.body);
     user = await user.save();
-    res.send(req.body);
+    user = user.toObject();         // convert json into the object
+    delete user.password;           // to delete the password for front end
+    res.send(user);
+    // }
+})
+
+app.post('/login', async (req, res) => {
+    if(req.body.email && req.body.password){
+        let user = await users.findOne(req.body).select("-password");
+        if(user) res.send(user);
+        else res.send({result: "No User found"})
+    }
+    else res.send({result: "No User found"});
+   
 })
 app.listen(5000);
