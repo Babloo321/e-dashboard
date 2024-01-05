@@ -37,15 +37,20 @@
   </li>
   <li>
     =>><b>postman</b>
-    <li>postman used to perform <b>CRUD</b> operation</li>
+    <p>postman used to perform <b>CRUD</b> operation</p>
   </li>
 </ul>
 <br/>
-<h2>api functionality</h2>
+<h2>==APIs FUNCTIONALITY==</h2>
 <ul>
   <li>
     =>> <b>signup</b>
-    <p>call the post api to save the data into the database</p>
+    <p>call the post in the postman to save the data into the database</p>
     <p>when user signup, after this can unvisible the signup button and show login button</p>
+  </li>
+  <li>
+    =>> <b>login</b>
+    <p>call the postman to find data and it i of without password </p>
+    <p>when user login on front-end side it match the data from api to the database data</p>
   </li>
 </ul>
