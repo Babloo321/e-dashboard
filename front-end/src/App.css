@@ -29,8 +29,11 @@
   width: 100%;
 }
 
-.signup{
+.signup, .login{
   margin-left: 38%;
+}
+.login{
+  padding-top: 3rem;
 }
 .inputBox{
   display: block;
