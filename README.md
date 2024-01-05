@@ -40,3 +40,12 @@
     <li>postman used to perform <b>CRUD</b> operation</li>
   </li>
 </ul>
+<br/>
+<h2>api functionality</h2>
+<ul>
+  <li>
+    =>> <b>signup</b>
+    <p>call the post api to save the data into the database</p>
+    <p>when user signup, after this can unvisible the signup button and show login button</p>
+  </li>
+</ul>
