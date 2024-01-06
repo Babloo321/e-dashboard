@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('./db/config');
 const users = require('./db/collections/users');
+const product = require('./db/collections/product');
 const app = express();
 app.use(express.json())
 app.use(cors());                // used as middleware
@@ -22,26 +23,30 @@ app.use(cors());                // used as middleware
 // connectDb();
 
 app.post('/register', async (req, res) => {
-    // console.log(req.body.email);
-    // let email = req.body.email;
-    // if(email == await users.findOne(email)){
-    //     res.send({result: "Invalid email address:: Please enter a valid email address"});
-    // }else{
     let user = new users(req.body);
     user = await user.save();
     user = user.toObject();         // convert json into the object
     delete user.password;           // to delete the password for front end
     res.send(user);
-    // }
 })
 
 app.post('/login', async (req, res) => {
     if(req.body.email && req.body.password){
         let user = await users.findOne(req.body).select("-password");
-        if(user) res.send(user);
-        else res.send({result: "No User found"})
+        if(user){
+             res.send(user);
+        }else{
+             res.send({result: "No User found"})
+        }
+    }else{
+        res.send({result: "No User found"});
     }
-    else res.send({result: "No User found"});
    
+})
+
+app.post('/add', async(req, res) => {
+    let item = new product(req.body);
+    item = await item.save();
+    res.send(item);
 })
 app.listen(5000);
