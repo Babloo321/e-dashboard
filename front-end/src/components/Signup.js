@@ -11,7 +11,7 @@ const Signup = () => {
         if(auth){
             navigate('/')
         }
-    })
+    },[])
 
     const collectData = async () =>{
         // console.table(`Name: ${name}\nEmail: ${email}\nPassword: ${password}`)
@@ -38,7 +38,7 @@ const Signup = () => {
     return(
         <div className="signup">
 
-        <h1>Signup component</h1>
+        <h1>Signup</h1>
 
         <input 
         className="inputBox" 
