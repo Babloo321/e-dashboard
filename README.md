@@ -17,6 +17,7 @@
   <li>
     =>> <b>structure</b>
     <p>create a components folder inside src folder for sperating the components</p>
+    <p>all <b>UI</b> components are inside the src's components folder</p>
   </li>
   </li>
 </ul>
@@ -52,5 +53,10 @@
     =>> <b>login</b>
     <p>call the postman to find data and it i of without password </p>
     <p>when user login on front-end side it match the data from api to the database data</p>
+  </li>
+  <li>
+    =>> <b>add product</b>
+    <p>create a api connected with postman for add a product</p>
+    <p>through this api current user can add the producct</p>
   </li>
 </ul>
