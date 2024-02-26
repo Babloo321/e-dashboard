@@ -38,7 +38,7 @@
   </li>
   <li>
     =>><b>postman</b>
-    <p>postman used to perform <b>CRUD</b> operation</p>
+    <p>postman used to testing the <b>APIs</b></p>
   </li>
 </ul>
 <br/>
@@ -51,12 +51,10 @@
   </li>
   <li>
     =>> <b>login</b>
-    <p>call the postman to find data and it i of without password </p>
     <p>when user login on front-end side it match the data from api to the database data</p>
   </li>
   <li>
     =>> <b>add product</b>
-    <p>create a api connected with postman for add a product</p>
     <p>through this api current user can add the producct</p>
   </li>
 </ul>
